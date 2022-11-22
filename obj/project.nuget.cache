@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "JzJTBKEJOsYPXLTQBFP3EQG2+pu40jZ2WLa3tkmmRaR6cV4Nq3aurQ1KgJ1u/yCKnVLXO+IUd1SVTu+xaDflpA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\natha\\Desktop\\School\\Fall22\\CSE210\\cse210-05\\cse210-05.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\natha\\.nuget\\packages\\raylib-cs\\4.2.0.1\\raylib-cs.4.2.0.1.nupkg.sha512",
+    "C:\\Users\\natha\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
