@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaked\\Documents\\GitHub\\cse210-05\\cse210-05.csproj": {}
+    "C:\\Users\\natha\\Desktop\\School\\Fall22\\CSE210\\cse210-05\\cse210-05.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaked\\Documents\\GitHub\\cse210-05\\cse210-05.csproj": {
+    "C:\\Users\\natha\\Desktop\\School\\Fall22\\CSE210\\cse210-05\\cse210-05.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaked\\Documents\\GitHub\\cse210-05\\cse210-05.csproj",
+        "projectUniqueName": "C:\\Users\\natha\\Desktop\\School\\Fall22\\CSE210\\cse210-05\\cse210-05.csproj",
         "projectName": "cse210-05",
-        "projectPath": "C:\\Users\\jaked\\Documents\\GitHub\\cse210-05\\cse210-05.csproj",
-        "packagesPath": "C:\\Users\\jaked\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaked\\Documents\\GitHub\\cse210-05\\obj\\",
+        "projectPath": "C:\\Users\\natha\\Desktop\\School\\Fall22\\CSE210\\cse210-05\\cse210-05.csproj",
+        "packagesPath": "C:\\Users\\natha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\natha\\Desktop\\School\\Fall22\\CSE210\\cse210-05\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jaked\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\natha\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

@@ -452,3 +452,8 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+obj/cse210-05.csproj.nuget.dgspec.json
+obj/cse210-05.csproj.nuget.g.props
+obj/project.assets.json
+obj/Debug/net6.0/cse210-05.assets.cache
+obj/project.nuget.cache
