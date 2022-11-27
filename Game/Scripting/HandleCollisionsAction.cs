@@ -11,7 +11,7 @@ namespace CSE210_05.Game.Scripting
     /// <para>An update action that handles interactions between the actors.</para>
     /// <para>
     /// The responsibility of HandleCollisionsAction is to handle the situation when the cycle 
-    /// collides with the food, or the cycle collides with its segments, or the game is over.
+    /// collides with its segments, or the game is over.
     /// </para>
     /// </summary>
     public class HandleCollisionsAction : Action
@@ -30,42 +30,32 @@ namespace CSE210_05.Game.Scripting
         {
             if (_isGameOver == false)
             {
-                HandleFoodCollisions(cast);
                 HandleSegmentCollisions(cast);
                 HandleGameOver(cast);
             }
         }
 
         /// <summary>
-        /// Updates the score nd moves the food if the cycle collides with it.
-        /// </summary>
-        /// <param name="cast">The cast of actors.</param>
-        private void HandleFoodCollisions(Cast cast)
-        {
-            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
-            Score score = (Score)cast.GetFirstActor("score");
-            Food food = (Food)cast.GetFirstActor("food");
-            
-            if (cycle.GetHead().GetPosition().Equals(food.GetPosition()))
-            {
-                int points = food.GetPoints();
-                cycle.GrowTrail(points);
-                score.AddPoints(points);
-                food.Reset();
-            }
-        }
-
-        /// <summary>
-        /// Sets the game over flag if the cycle collides with one of its segments.
+        /// Sets the game over flag if the cycle collides with one of the segments of the opponent.
         /// </summary>
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
             Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
             Actor head = cycle.GetHead();
+            Actor head2 = cycle2.GetHead();
             List<Actor> body = cycle.GetBody();
+            List<Actor> body2 = cycle2.GetBody();
 
             foreach (Actor segment in body)
+            {
+                if (segment.GetPosition().Equals(head2.GetPosition()))
+                {
+                    _isGameOver = true;
+                }
+            }
+            foreach (Actor segment in body2)
             {
                 if (segment.GetPosition().Equals(head.GetPosition()))
                 {
@@ -79,8 +69,9 @@ namespace CSE210_05.Game.Scripting
             if (_isGameOver == true)
             {
                 Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+                Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
                 List<Actor> segments = cycle.GetSegments();
-                Food food = (Food)cast.GetFirstActor("food");
+                List<Actor> segments2 = cycle2.GetSegments();
 
                 // create a "game over" message
                 int x = Constants.MAX_X / 2;
@@ -97,7 +88,10 @@ namespace CSE210_05.Game.Scripting
                 {
                     segment.SetColor(Constants.WHITE);
                 }
-                food.SetColor(Constants.WHITE);
+                foreach (Actor segment in segments2)
+                {
+                    segment.SetColor(Constants.WHITE);
+                }
             }
         }
 
