@@ -14,7 +14,7 @@ namespace CSE210_05.Game.Scripting
     public class GrowTrailAction : Action
     {
         /// <summary>
-        /// Constructs a new instance of MoveActorsAction.
+        /// Constructs a new instance of GrowTrailAction.
         /// </summary>
         public GrowTrailAction()
         {
