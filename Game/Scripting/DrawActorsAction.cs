@@ -28,15 +28,11 @@ namespace CSE210_05.Game.Scripting
             List<Actor> segments = cycle.GetSegments();
             Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
             List<Actor> segments2 = cycle2.GetSegments();
-            Actor score = cast.GetFirstActor("score");
-            Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");
             
             _videoService.ClearBuffer();
             _videoService.DrawActors(segments);
             _videoService.DrawActors(segments2);
-            // _videoService.DrawActor(score);
-            // _videoService.DrawActor(food);
             _videoService.DrawActors(messages);
             _videoService.FlushBuffer();
         }

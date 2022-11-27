@@ -24,10 +24,8 @@ namespace CSE210_05
 
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("food", new Food());
             cast.AddActor("cycle", new Cycle(start1, color));
             cast.AddActor("cycle2", new Cycle(start2, color2));
-            cast.AddActor("score", new Score());
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();
