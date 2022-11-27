@@ -1,5 +1,5 @@
 # Cycles
-Basically Tron. This is a two-player game in which each player controls a cycle that leave behind a trail. If the other player runs into your trail, they lose!
+Basically Tron. This is a two-player game in which each player controls a cycle that leaves behind a trail. If the other player runs into your trail, they lose!
 
 ---
 ## Project Structure
