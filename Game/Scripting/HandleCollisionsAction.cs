@@ -28,11 +28,8 @@ namespace CSE210_05.Game.Scripting
         /// <inheritdoc/>
         public void Execute(Cast cast, Script script)
         {
-            if (_isGameOver == false)
-            {
-                HandleSegmentCollisions(cast);
-                HandleGameOver(cast);
-            }
+            HandleSegmentCollisions(cast);
+            HandleGameOver(cast);
         }
 
         /// <summary>
@@ -41,11 +38,11 @@ namespace CSE210_05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            Cycle cycle1 = (Cycle)cast.GetFirstActor("cycle1");
             Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
-            Actor head = cycle.GetHead();
+            Actor head = cycle1.GetHead();
             Actor head2 = cycle2.GetHead();
-            List<Actor> body = cycle.GetBody();
+            List<Actor> body = cycle1.GetBody();
             List<Actor> body2 = cycle2.GetBody();
 
             foreach (Actor segment in body)
@@ -68,9 +65,9 @@ namespace CSE210_05.Game.Scripting
         {
             if (_isGameOver == true)
             {
-                Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+                Cycle cycle1 = (Cycle)cast.GetFirstActor("cycle1");
                 Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
-                List<Actor> segments = cycle.GetSegments();
+                List<Actor> segments1 = cycle1.GetSegments();
                 List<Actor> segments2 = cycle2.GetSegments();
 
                 // create a "game over" message
@@ -84,7 +81,7 @@ namespace CSE210_05.Game.Scripting
                 cast.AddActor("messages", message);
 
                 // make everything white
-                foreach (Actor segment in segments)
+                foreach (Actor segment in segments1)
                 {
                     segment.SetColor(Constants.WHITE);
                 }
@@ -92,6 +89,10 @@ namespace CSE210_05.Game.Scripting
                 {
                     segment.SetColor(Constants.WHITE);
                 }
+
+                // Negate growing trail
+                cycle1.GrowTrail(-1, Constants.WHITE);
+                cycle2.GrowTrail(-1, Constants.WHITE);
             }
         }
 

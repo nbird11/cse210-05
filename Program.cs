@@ -24,7 +24,7 @@ namespace CSE210_05
 
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("cycle", new Cycle(start1, color));
+            cast.AddActor("cycle1", new Cycle(start1, color));
             cast.AddActor("cycle2", new Cycle(start2, color2));
 
             // create the services
@@ -35,6 +35,7 @@ namespace CSE210_05
             Script script = new Script();
             script.AddAction("input", new ControlActorsAction(keyboardService));
             script.AddAction("update", new MoveActorsAction());
+            script.AddAction("update", new GrowTrailAction());
             script.AddAction("update", new HandleCollisionsAction());
             script.AddAction("output", new DrawActorsAction(videoService));
 

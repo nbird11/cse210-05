@@ -51,7 +51,7 @@ namespace CSE210_05.Game.Scripting
                 _direction = new Point(0, Constants.CELL_SIZE);
             }
 
-            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            Cycle cycle = (Cycle)cast.GetFirstActor("cycle1");
             cycle.TurnHead(_direction);
 
             // left
