@@ -24,10 +24,10 @@ namespace CSE210_05.Game.Scripting
         /// <inheritdoc/>
         public void Execute(Cast cast, Script script)
         {
-            Snake snake = (Snake)cast.GetFirstActor("snake");
-            List<Actor> segments = snake.GetSegments();
-            Snake snake2 = (Snake)cast.GetFirstActor("snake2");
-            List<Actor> segments2 = snake2.GetSegments();
+            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            List<Actor> segments = cycle.GetSegments();
+            Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
+            List<Actor> segments2 = cycle2.GetSegments();
             Actor score = cast.GetFirstActor("score");
             Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");

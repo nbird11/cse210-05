@@ -5,9 +5,9 @@ using CSE210_05.Game.Services;
 namespace CSE210_05.Game.Scripting
 {
     /// <summary>
-    /// <para>An input action that controls the snake.</para>
+    /// <para>An input action that controls the cycle.</para>
     /// <para>
-    /// The responsibility of ControlActorsAction is to get the direction and move the snake's head.
+    /// The responsibility of ControlActorsAction is to get the direction and move the cycle's head.
     /// </para>
     /// </summary>
     public class ControlActorsAction : Action
@@ -51,8 +51,8 @@ namespace CSE210_05.Game.Scripting
                 _direction = new Point(0, Constants.CELL_SIZE);
             }
 
-            Snake snake = (Snake)cast.GetFirstActor("snake");
-            snake.TurnHead(_direction);
+            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            cycle.TurnHead(_direction);
 
             // left
             if (_keyboardService.IsKeyDown("j"))
@@ -78,8 +78,8 @@ namespace CSE210_05.Game.Scripting
                 _direction2 = new Point(0, Constants.CELL_SIZE);
             }
 
-            Snake snake2 = (Snake)cast.GetFirstActor("snake2");
-            snake2.TurnHead(_direction2);
+            Cycle cycle2 = (Cycle)cast.GetFirstActor("cycle2");
+            cycle2.TurnHead(_direction2);
 
         }
     }
